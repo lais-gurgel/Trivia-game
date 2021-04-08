@@ -1,13 +1,10 @@
-
 .container-login {
-  background-color: white;
   height: 400px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
   border-radius: 5%;
   background: linear-gradient(rgb(80, 79, 79), #1b43bd);
-  
 }
 
 .forms {
@@ -45,4 +42,33 @@ input {
   line-height: 30px;
   padding: 3px 8px;
   color: white;
+}
+
+.trivia-logo {
+  margin: 10px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .trivia-logo {
+    animation: shake infinite 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
